@@ -60,7 +60,7 @@ theme:
     code: Roboto Mono
 
 nav:
-  - Tags : home/tags.md
+  - Tags : tags/tags.md
   - About: home/about.md
   - Home:
       - Projects: home/index.md
