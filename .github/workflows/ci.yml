@@ -32,7 +32,6 @@ jobs:
 
       - name: Build MkDocs site
         run: |
-          # If your docs are in a custom folder like 'docs/', specify it:
           mkdocs build --site-dir site
 
       - name: Setup Pages
@@ -62,8 +61,6 @@ jobs:
 
       - name: Show deployed URL
         run: |
-          if [[ -n "${{ github.repository_owner }}" && -n "${{ github.repository }}" ]]; then
-            echo "Your site is deployed at: https://${{ github.repository_owner }}.github.io/${{ github.repository }}/"
-          else
-            echo "Unable to detect repository info for GitHub Pages URL."
-          fi
+          REPO_OWNER=${{ github.repository_owner }}
+          REPO_NAME=${{ github.repository }}
+          echo "Your site is deployed at: https://$REPO_OWNER.github.io/$REPO_NAME/"
