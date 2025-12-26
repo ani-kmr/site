@@ -63,7 +63,7 @@ nav:
   - Tags : tags/tags.md
   - About: home/about.md
   - Home:
-      - Projects: home/index.md
+      - Projects: index.md
       - Project Layout: home/layout.md
       - Tools and Technologies: home/tools_technologies.md
 
@@ -132,7 +132,7 @@ plugins:
 extra:
   tags:
     About: home/about.md
-    Home: home/index.md
+    Home: index.md
     Projects: projects
     Releases: releases
   
