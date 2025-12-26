@@ -1,99 +1,72 @@
 site_name: DE Project Blog
 site_description: Documentation for the DE Project
-site_url: https://mydomain.org/DEProjectBlog
+site_url: https://ani-kmr.github.io/DEProjectBlog/
+
+use_directory_urls: true
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
   features:
     - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
-    - navigation.instant.preview
-    - navigation.tracking
     - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
     - navigation.expand
-    - navigation.path
-    - navigation.indexes
     - toc.follow
-    - navigation.top
-    - content.code.annotate
     - content.code.copy
+    - content.code.annotate
     - content.code.fold
     - content.tabs.links
     - footer.social
     - footer.navigation
-    - announce.dismiss
-    - navigation.footer
-    - content.code.annotate # (1)
-  logo: assets/logo.png
-  favicon: assets/favicon.png
-  tag:
-      default: material/label-outline
-      active: material/label
-
   palette:
-
-    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
-
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-      
   font:
-    text: Roboto  
+    text: Roboto
     code: Roboto Mono
 
 nav:
-  - Tags : tags/tags.md
+  - Home: index.md
   - About: home/about.md
-  - Home:
-      - Projects: index.md
-      - Project Layout: home/layout.md
-      - Tools and Technologies: home/tools_technologies.md
-
+  - Layout: home/layout.md
+  - Tools & Technologies: home/tools_technologies.md
+  - Tags: tags/tags.md
   - Projects:
       - Airline:
-          - Documentation:
-            - Overview: projects/airline/airline.md
-            - Data Exploration: projects/airline/airline_data_exploration.md
-            - Modeling: projects/airline/airline_modeling.md
-            - Code Templates: projects/airline/airline_code_templates.md
-            - Orchestration: projects/airline/airline_orchestration.md
-            - Deployment: projects/airline/airline_deployment.md
+          - Overview: projects/airline/airline.md
+          - Data Exploration: projects/airline/airline_data_exploration.md
+          - Modeling: projects/airline/airline_modeling.md
+          - Code Templates: projects/airline/airline_code_templates.md
+          - Orchestration: projects/airline/airline_orchestration.md
+          - Deployment: projects/airline/airline_deployment.md
       - Market Data:
-          - Documentation:
-            - Overview: projects/market/market_data.md
-            - Data Exploration: projects/market/market_data_exploration.md
-            - Modeling: projects/market/market_data_modeling.md
-            - Code Templates: projects/market/market_data_code_templates.md
-            - Orchestration: projects/market/market_data_orchestration.md
-            - Deployment: projects/market/market_data_deployment.md
+          - Overview: projects/market/market_data.md
+          - Data Exploration: projects/market/market_data_exploration.md
+          - Modeling: projects/market/market_data_modeling.md
+          - Code Templates: projects/market/market_data_code_templates.md
+          - Orchestration: projects/market/market_data_orchestration.md
+          - Deployment: projects/market/market_data_deployment.md
       - Stock Prices:
-          - Documentation:
-            - Overview: projects/Stock/stock_prices.md
-            - Data Exploration: projects/Stock/stock_data_exploration.md
-            - Modeling: projects/Stock/stock_data_modeling.md
-            - Code Templates: projects/Stock/stock_data_code_templates.md
-            - Orchestration: projects/Stock/stock_data_orchestration.md
-            - Deployment: projects/Stock/stock_data_deployment.md
+          - Overview: projects/Stock/stock_prices.md
+          - Data Exploration: projects/Stock/stock_data_exploration.md
+          - Modeling: projects/Stock/stock_data_modeling.md
+          - Code Templates: projects/Stock/stock_data_code_templates.md
+          - Orchestration: projects/Stock/stock_data_orchestration.md
+          - Deployment: projects/Stock/stock_data_deployment.md
       - Others: projects/others.md
-
   - Releases:
       - Airline:
           - Change:
@@ -106,14 +79,9 @@ nav:
           - Fix:
               - v1.0.0: releases/market/fix/v1.0.0.md
 
-
 markdown_extensions:
   - admonition
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.snippets
   - attr_list
   - md_in_html
@@ -128,14 +96,7 @@ plugins:
         scoped:
           scope: true
 
-
 extra:
-  tags:
-    About: home/about.md
-    Home: index.md
-    Projects: projects
-    Releases: releases
-  
   social:
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/dashboard/home
@@ -146,5 +107,4 @@ extra:
 
 copyright: |
   Copyright © 2016-2025 Anil Kumar K
-
   Licensed under the [MIT License](https://opensource.org/licenses/MIT).
